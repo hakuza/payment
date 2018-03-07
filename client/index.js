@@ -15,7 +15,7 @@ class Payment extends React.Component {
 	componentDidMount () {
     //get course data from database set state
     var context = this;
-	  Axios.get('http://127.0.0.1:3003/courses')
+	  Axios.get('/courses')
     .then(function (response){
       context.setState({courses:response.data, courseToPurchase: response.data[70]})  
     })
@@ -46,4 +46,4 @@ class Payment extends React.Component {
   }
 }
 
-ReactDOM.render(<Payment />, document.getElementById('app'))
+ReactDOM.render(<Payment />, document.getElementById('payment'))

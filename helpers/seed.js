@@ -9,7 +9,7 @@ const seed = async function () {
 	for (var i = 0; i < data.length; i++) { 
     var course = data[i]
       const courseDoc = new udemyCourses({
-        id: course.id,
+        id: i,
         title: course.title,
         price: course.price,
         headline: course.headline,
