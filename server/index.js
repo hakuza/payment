@@ -1,5 +1,8 @@
-const express = require('express')
-const router = require('./routes.js')
+const express = require('express');
+const router = require('./routes.js');
+//this is meant to read and call seed for every new mongo container in docker
+const seed = require('../helpers/seed.js')
+
 const app = express();
 app.set('port',3003);
 app.use(express.static(__dirname + '/../public'))
