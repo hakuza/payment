@@ -5,7 +5,7 @@ const getCourses = require("../helpers/getCourses.js")
 
 //connect to database 
 const mongoUrl = 
-mongoose.connect("mongodb://database/udemy");
+mongoose.connect("mongodb://database/payment");
 
 const Schema = mongoose.Schema
 //design schema for database

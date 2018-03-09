@@ -3,7 +3,7 @@ import jest from 'jest';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import InfoBody '../components/infoBody.jsx'
-import 
+
 
 const sampleData = 
 
@@ -20,8 +20,8 @@ const sampleData =
 configure({ adapter: new Adapter() });
 
 
-describe('Description Component Tests', () => {
-  const wrapShallow = shallow(<Description listing={sampleData} />);
+describe('InfoBody Component Tests', () => {
+  const wrapShallow = shallow(<InfoBody listing={sampleData} />);
 
   it('should exist', () => {
     expect(wrapShallow.exists()).toEqual(true);
