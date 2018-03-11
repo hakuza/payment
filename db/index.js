@@ -4,7 +4,7 @@ const request = require("request-promise");
 const getCourses = require("../helpers/getCourses.js")
 
 //connect to database 
-const mongoUrl = 
+
 mongoose.connect("mongodb://database/payment");
 
 const Schema = mongoose.Schema

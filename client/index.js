@@ -15,16 +15,17 @@ class Payment extends React.Component {
 	componentDidMount () {
     //get course data from database set state
     var context = this;
-	  Axios.get('/courses')
+    var id = window.location.search || '?id=75'; 
+	  Axios.get('/courses' + id)
     .then(function (response){
-      context.setState({courses:response.data, courseToPurchase: response.data[70]})  
+      context.setState({courseToPurchase: response.data[0]})  
     })
     .catch(function(err){
       console.error(err) 
     })
     //get preview videos for preview component
     getYoutubeVideos('hackreactor bootcamp',(data)=> {
-      this.setState({previewVideo:data[1], courses:this.state.courses, courseToPurchase:this.state.courseToPurchase})  
+      this.setState({previewVideo:data[1], courseToPurchase:this.state.courseToPurchase})  
     })    	
 	}
 

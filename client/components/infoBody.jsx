@@ -41,7 +41,7 @@ class InfoBody extends React.Component {
             </div>
              <div className="suplemental-recourses">
               <FontAwesomeIcon className="icons" icon={faFileAlt} />
-              <span>{Math.floor(Math.random() * (this.props.course.courseToPurchase.num_quizzes) + 2) + 'Supplemental Resources'}</span>
+              <span>{Math.floor(Math.random() * (this.props.course.courseToPurchase.num_quizzes) + 2) + ' Supplemental Resources'}</span>
             </div>
             <div className="info-lifetime">
               <FontAwesomeIcon className="icons" icon={faDotCircle} />
